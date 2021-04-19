@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from test_app.models import Post, Comment
+from test_app.models import Post, Comment, Category
 
 
 class CommentInline(admin.StackedInline):
@@ -19,4 +19,5 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Category)
 # admin.site.register(Comment)

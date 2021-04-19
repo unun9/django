@@ -24,5 +24,7 @@ urlpatterns = [
     path('posts/', views.get_posts),
     path('posts/<int:id>/', views.get_post),
     path('', views.main_page),
+    path('add/', views.add),
+    path('add_category/', views.add_category),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

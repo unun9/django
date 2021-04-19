@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2> добавит пост </h2>
+        <form action="/add/" method="post">
+            {% csrf_token %}
+            <input name="title" class="form-control" type="text" placeholder="Названия поста">
+            <br>
+            <textarea name="text" class="form-control" placeholder="Техт"></textarea>
+            <br>
+            <input type="submit" class="btn btn-info" value="Отправить">
+
+        </form>
+    </div>
+{% endblock %}
