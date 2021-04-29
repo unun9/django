@@ -5,6 +5,26 @@
 {% block content %}
     <div class="container">
         <h1>Welcome Page</h1>
+    <nav aria-label="Page navigation example">
+  <ul class="pagination pagination-sm">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+      {% for i in pages %}
+    <li class="page-item "><a class="page-link" href="/posts/?page={{ i }}">{{ i }}</a></li>
+      {% endfor %}
+
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
         <img src="{% static 'img/photo.jpg' %}" style="width: 100px" alt="photo.jpg">
         {% for i in articles %}
             <h2><a href="/posts/{{ i.id }}/"> Title: {{ i.title }} </a></h2>
@@ -12,6 +32,7 @@
             <p>Created date: {{ i.created }}</p>
             <hr>
         {% endfor %}
+
     </div>
 {% endblock %}
 

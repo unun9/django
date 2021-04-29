@@ -26,5 +26,8 @@ urlpatterns = [
     path('', views.main_page),
     path('add/', views.add),
     path('add_category/', views.add_category),
+    path('register/', views.register),
+    path('login/', views.login),
+    path('logout/', views.logout),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

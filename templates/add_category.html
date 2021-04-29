@@ -3,7 +3,7 @@
 {% block content %}
   <div class="container">
         <h2> Добавит Категории </h2>
-        <form action="/add_category/" method="CATEGORY">
+        <form action="/add_category/" method="POST">
             {% csrf_token %}
             <input name="title" class="form-control" type="text" placeholder="Названия Категории">
 
